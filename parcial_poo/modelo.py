@@ -1,4 +1,3 @@
-# MODELO: Representa los datos
 
 class Libro:
     def __init__(self, titulo, autor):
@@ -13,3 +12,4 @@ class Usuario:
 
     
             
+
