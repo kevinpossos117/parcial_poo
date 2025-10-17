@@ -1,16 +1,16 @@
-# VISTA MODELO: Lógica + conexión con Firebase
+
 import firebase_admin
 from firebase_admin import credentials, db
 from modelo import Libro, Usuario
 
-# Inicializar Firebase solo una vez
+# Inicia Firebase solo una vez
 try:
     cred = credentials.Certificate("parcial-59236-firebase-adminsdk-fbsvc-b8754fdee9.json")
     firebase_admin.initialize_app(cred, {
         "databaseURL": "https://parcial-59236-default-rtdb.firebaseio.com/"
     })
 except ValueError:
-    pass  # Evita error si ya está inicializado
+    pass  
 
 class BibliotecaViewModel:
     def __init__(self):

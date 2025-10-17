@@ -1,4 +1,3 @@
-# VISTA: Interacción con el usuario (consola)
 from vista_modelo import BibliotecaViewModel
 
 class BibliotecaView:
@@ -7,7 +6,7 @@ class BibliotecaView:
 
     def mostrar_menu(self):
         while True:
-            print("\n📚 MENÚ DE BIBLIOTECA")
+            print("\n MENÚ DE BIBLIOTECA")
             print("1. Agregar libro")
             print("2. Registrar usuario")
             print("3. Mostrar libros")
@@ -25,10 +24,10 @@ class BibliotecaView:
             elif opcion == "4":
                 self.mostrar_usuarios()
             elif opcion == "5":
-                print("👋 Saliendo del sistema...")
+                print(" Saliendo del sistema...")
                 break
             else:
-                print("⚠️ Opción inválida, intente nuevamente.")
+                print(" Opción inválida, intente nuevamente.")
 
     def agregar_libro(self):
         titulo = input("Título del libro: ")
@@ -43,7 +42,7 @@ class BibliotecaView:
     def mostrar_libros(self):
         libros = self.vm.obtener_libros()
         if libros:
-            print("\n📘 Libros en Firebase:")
+            print(" Libros en Firebase:")
             for titulo, autor in libros:
                 print(f"  - {titulo} ({autor})")
         else:
@@ -52,7 +51,7 @@ class BibliotecaView:
     def mostrar_usuarios(self):
         usuarios = self.vm.obtener_usuarios()
         if usuarios:
-            print("\n👤 Usuarios registrados:")
+            print(" Usuarios registrados:")
             for nombre, id_usuario in usuarios:
                 print(f"  - {nombre} (ID: {id_usuario})")
         else:
